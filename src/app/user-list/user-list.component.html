@@ -1,0 +1,21 @@
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>User Name</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of userList">
+      <td >{{user.id}}</td>
+      <td >{{user.username}}</td>
+      <td >{{user.email}}</td>
+      <td >{{user.address.city}}</td>
+      <td><button class="btn btn-info" (click)="viewMore(user.id)">More</button></td>
+    </tr>
+  </tbody>
+</table>
